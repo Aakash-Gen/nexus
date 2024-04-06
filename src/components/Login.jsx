@@ -52,19 +52,20 @@ function Login() {
         }
       };
   return (
-    <div className="flex flex-col justify-center items-center w-screen h-screen  ">
+    <div className="flex flex-col justify-center items-center w-screen h-screen ">
     <div className="pb-8 text-4xl font-bold">Login</div>
     <div className=" flex flex-col gap-2">
-        <input className="bg-purple-200 border border-gray-300 p-1.5 w-60 text-center rounded-xl text-gray-700 text-md focus:border-emerald-200" type="email" placeholder="Enter your Email" onChange={(e)=> setEmail(e.target.value)} /> 
-        <input className="bg-purple-200 border border-gray-300 p-1.5 w-60 text-center rounded-xl text-gray-700 text-md focus:border-emerald-200" type="password" placeholder="Enter your Password" onChange={(e)=> setPassword(e.target.value)}/>
-        <button className=" border border-gray-300 p-1.5 w-60 text-center rounded-xl text-gray-700 text-md focus:border-emerald-200 hover:bg-gray-200" onClick={()=>setTimeout(()=>{logInWithEmailAndPassword(email,password)},3000)}>Login</button>
+        <input className="bg-purple-200 border-2 border-gray-300 p-1.5 w-60 text-center rounded-xl text-gray-700 text-md" type="email" placeholder="Enter your Email" onChange={(e)=> setEmail(e.target.value)} /> 
+        <input className="bg-purple-200 border-2 border-gray-300 p-1.5 w-60 text-center rounded-xl text-gray-700 text-md" type="password" placeholder="Enter your Password" onChange={(e)=> setPassword(e.target.value)}/>
+        <button className=" border-2 border-gray-300 p-1.5 w-60 text-center rounded-xl text-gray-700 text-md font-semibold hover:bg-gray-200" onClick={()=>setTimeout(()=>{logInWithEmailAndPassword(email,password)},1500)}>Login</button>
+        <div onClick={()=>navigate('/password_reset')} className="text-sm underline flex justify-center hover:cursor-pointer">Forgot password</div>
         <div className="flex mt-4 gap-6 items-center ml-1">
             <div className="bg-gray-500 h-0.5 w-20"></div>
             <div>OR</div>
             <div className="bg-gray-500 h-0.5 w-20"></div>
         </div>
         <div>
-            <div onClick={async ()=> signInWithGoogle()} className="flex mt-4 justify-center gap-2 items-center border border-gray-300 w-60 p-1 rounded-lg hover:bg-gray-200 hover:cursor-pointer">
+            <div onClick={()=> signInWithGoogle()} className="flex mt-4 justify-center gap-2 items-center text-md font-semibold border-2 border-gray-300 w-60 p-1.5 rounded-xl hover:bg-gray-200 hover:cursor-pointer">
             <FcGoogle/>
             Google
             </div>
