@@ -113,14 +113,15 @@ function Chat() {
 
   return (
     <div className='bg-white h-full rounded-2xl grid grid-cols-9 p-4' >
-        <div className="col-span-3">
-            <div className="flex gap-4 items-center border-1  p-1.5 rounded-lg w-[70%] bg-purple-200">
+        <div className="col-span-3 flex justify-evenly">
+            <div className="flex gap-4 items-center border-1  p-1.5 rounded-lg w-[70%] bg-purple-200 h-10 mr-4">
                 <CiSearch size={20} color="black"/>
                 <input className="border-none outline-none bg-purple-200" type="text" placeholder="Search" onChange={(e)=>setSearch(e.target.value)}/>
             </div>
+            <div className="bg-gray-200 w-[8px] h-full rounded-full"></div>
         </div>
         <div className=" flex flex-col col-span-6">
-            <div className="ml-8 text-3xl font-semibold mb-5 text-gray-700">Group Chat</div>
+            <div className="ml-2 text-3xl font-semibold mb-5 text-gray-700">Group Chat</div>
             <div className=" flex-grow overflow-y-auto mb-2 h-[0.8vh]">
               {messages.map(({ id, data }) => (
                 <div key={id} className={`message ${data.uid === user.uid ? "sent flex justify-end" : "received"}`}>
