@@ -28,9 +28,9 @@ function SignUp() {
           const user = res.user;
           await addDoc(collection(db, "users"), {
             uid: user.uid,
-            name,
+            name: user.displayName,
             authProvider: "local",
-            email,
+            email : user.email
           });
           navigate('/login');
         } catch (err) {
