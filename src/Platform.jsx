@@ -8,7 +8,7 @@ function Platform() {
         <div className="w-[6%]">
             <LeftSection/>
         </div>
-        <div className="w-[0.5] h-[80%] bg-gray-800"></div>
+        {/* <div className="w-[0.5] h-[80%] bg-gray-800"></div> */}
         <div className="w-[76%] p-3">
             <Chat/>
         </div>
