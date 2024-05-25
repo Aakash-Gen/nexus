@@ -24,8 +24,11 @@ function Search() {
             <input className="border-none outline-none bg-purple-200" type="text" placeholder="Search" onKeyDown={handleKey} onChange={(e)=>setSearch(e.target.value)}/>
         </div>
         <ChatTab name="Aakash" message="hi" photo={user.photoURL}/>
-        <ChatTab name="john" message="yo" photo="/Anonymous.png" />
-        <ChatTab name="Ana de Armas" message="sup" photo="https://hips.hearstapps.com/hmg-prod/images/ana-de-armas-1626771511.jpg?crop=0.6923333333333334xw:1xh;center,top&resize=640:*" />
+        <ChatTab name="Lycanroc" message="I am the best" photo="src/assets/Lycanroc.jpg" />
+        {/* <ChatTab name="Ana de Armas" message="sup" photo="https://hips.hearstapps.com/hmg-prod/images/ana-de-armas-1626771511.jpg?crop=0.6923333333333334xw:1xh;center,top&resize=640:*" /> */}
+        <ChatTab name="Aakash1" message="whats up" photo="src/assets/WhatsApp Image 2024-02-18 at 01.01.04.jpeg" />
+        <ChatTab name="Me" message="heyyyy" photo="src/assets/WhatsApp Image 2024-04-09 at 12.12.51.jpeg" />
+        <ChatTab name="Jain" message="well that's odd" photo="src/assets/WhatsApp Image 2024-04-10 at 14.36.26.jpeg" />
     </div>
   )
 }
